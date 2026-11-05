@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-panel"><p class="eyebrow">NEW LOCAL ACCOUNT</p><h1>Set up AuthSense</h1><p>You will need an authenticator app capable of generating six-digit TOTP codes.</p>
+<form method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+<label for="username">Account name</label><input id="username" name="username" autocomplete="username" minlength="3" maxlength="32" pattern="[a-z][a-z0-9_]{2,31}" placeholder="student_01" required>
+<small>3–32 lowercase letters, numbers or underscores. Start with a letter.</small>
+<label for="password">Password or passphrase</label><input id="password" name="password" type="password" autocomplete="new-password" minlength="15" maxlength="128" required><small>At least 15 characters. Choose a unique passphrase.</small>
+<label class="check"><input type="checkbox" name="consent" value="yes" required><span>I understand that verified enrollment stores typing timing summaries on this machine. Live monitoring is opt-in. I can export or delete my profile in Settings.</span></label>
+<button class="button full">Create account</button></form></section>
+{% endblock %}

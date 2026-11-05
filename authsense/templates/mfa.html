@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-panel"><p class="eyebrow">COMPLETE SIGN-IN</p><h1>Verify your second factor</h1>
+<form method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><label for="code">Authenticator or unused recovery code</label><input id="code" name="code" autocomplete="one-time-code" maxlength="40" required autofocus><button class="button full">Verify and sign in</button></form><p>Already used a code? Wait for the next 30-second code.</p></section>
+{% endblock %}

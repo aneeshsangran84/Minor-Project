@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-panel"><p class="eyebrow">WELCOME BACK</p><h1>Sign in</h1><p>Your password is followed by a second-factor check.</p>
+<form method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+<label for="username">Account name</label><input id="username" name="username" autocomplete="username" maxlength="32" required autofocus>
+<label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" maxlength="128" required>
+<button class="button full">Continue</button></form>
+<p><a href="{{ url_for('web.register') }}">Create an account</a></p></section>
+{% endblock %}

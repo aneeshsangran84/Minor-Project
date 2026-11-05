@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-panel"><p class="eyebrow">SAVE BEFORE CONTINUING</p><h1>Your recovery codes</h1><p>Each code can replace an authenticator code once. You still need your password. These codes are shown only now.</p>
+<ul class="codes">{% for code in codes %}<li><code>{{ code }}</code></li>{% endfor %}</ul>
+<p>Store them in a password manager or another safe place outside this application. If you lose both your authenticator and these codes, there is no authentication bypass.</p>
+<a class="button full" href="{{ url_for('web.dashboard') }}">I saved my codes</a></section>
+{% endblock %}

@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="page-heading"><div><p class="eyebrow">YOUR ACCOUNT ONLY</p><h1>Security activity</h1><p>The latest 100 events. Up to 500 events are retained per account.</p></div></div>
+<div class="table-wrap"><table><thead><tr><th>Time</th><th>Event</th><th>Details</th></tr></thead><tbody>{% for event in events %}<tr><td>{{ event.created_at|clock }}</td><td>{{ event.event }}</td><td>{{ event.detail }}</td></tr>{% else %}<tr><td colspan="3">No events yet.</td></tr>{% endfor %}</tbody></table></div>
+{% endblock %}

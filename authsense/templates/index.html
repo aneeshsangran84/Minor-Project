@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">BEHAVIORAL SESSION SECURITY</p>
+  <h1>Recognize patterns.<br><span>Respond to uncertainty.</span></h1>
+  <p class="lead">Explore how typing behavior can help protect an authenticated session. Enroll a profile, observe live decisions, and verify again when evidence changes.</p>
+  <div class="actions"><a class="button" href="{{ url_for('web.register') }}">Create a local account</a><a class="button secondary" href="{{ url_for('web.login') }}">Sign in</a></div>
+  <div class="explanation"><b>Built for your security lab</b><p>Data stays on this machine. Collection starts only when you enable it in the typing workspace. Passwords and typed text are excluded from behavioral records.</p></div>
+</section>
+<div class="steps"><div><span>01</span><h2>Verify</h2><p>Use a password and an authenticator app.</p></div><div><span>02</span><h2>Enroll</h2><p>Collect three verified typing rounds.</p></div><div><span>03</span><h2>Observe</h2><p>See how your profile affects session access.</p></div></div>
+{% endblock %}
