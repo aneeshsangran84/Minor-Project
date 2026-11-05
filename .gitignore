@@ -1,0 +1,8 @@
+.venv/
+instance/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.sqlite*
+*.key
+evaluation-output/
